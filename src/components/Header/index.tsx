@@ -18,11 +18,11 @@ export function Header(){
         </Link>
 
         <nav className={styles.menuNav}>
-          <Link href="/category" legacyBehavior>
+          <Link href="/scheduling" legacyBehavior>
             <a>Novo Agendamento</a>
           </Link>
 
-          <Link href="/product" legacyBehavior>
+          <Link href="/dashboard" legacyBehavior>
             <a>Agendamentos</a>
           </Link>   
 

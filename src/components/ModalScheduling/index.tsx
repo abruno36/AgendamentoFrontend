@@ -25,9 +25,7 @@ export function ModalScheduling({ isOpen, onRequestClose, scheduling, handleFini
     return `${day}/${month}/${year}`;
   }
 
-const formattedDate = formatDateString(scheduling.date);
-
-console.log(formattedDate); // Saída: '01/03/2024'
+  const formattedDate = formatDateString(scheduling.date);
 
   const customStyles = {
     content:{
@@ -73,7 +71,7 @@ console.log(formattedDate); // Saída: '01/03/2024'
         </section>
 
 
-      <button className={styles.buttonOrder} onClick={ () => handleFinishScheduling(scheduling[0].id) }>
+      <button className={styles.buttonOrder} onClick={ () => handleFinishScheduling(scheduling.id) }>
         Concluir Agendamento
       </button>
 

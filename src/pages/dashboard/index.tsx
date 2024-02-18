@@ -22,6 +22,7 @@ type SchedulingProps = {
   hour: string,
   washingType: string,
   status: boolean;
+  vehicle: string;
 }
 
 interface HomeProps{
@@ -36,6 +37,7 @@ export type SchedulingItemProps = {
     hour: string,
     washingType: string,
     status: boolean;
+    vehicle: string
   }
 
 export default function Dashboard({ schedulings }: HomeProps){
@@ -50,15 +52,17 @@ export default function Dashboard({ schedulings }: HomeProps){
     setModalVisible(false);
   }
 
-  async function handleOpenModalView(id: string){
+  async function handleOpenModalView(id: string, plate: string){
    
      const apiClient = setupAPIClient(); 
 
      const response = await apiClient.get('/scheduling/detail', {
        params:{
-        scheduling_id: id,
+        scheduling_id: id
        } 
      })
+
+     //console.log("response - ", response, " scheduling_id - ", id);
 
      setModalItem(response.data);
      setModalVisible(true);
@@ -66,6 +70,7 @@ export default function Dashboard({ schedulings }: HomeProps){
   }
 
   async function handleFinishItem(id: string){
+    console.log("id", id)
     const apiClient = setupAPIClient();
     await apiClient.put('/scheduling/finish', {
       scheduling_id: id,
@@ -116,7 +121,7 @@ export default function Dashboard({ schedulings }: HomeProps){
 
           {schedulingList.map( item => (
             <section  key={item.id} className={styles.orderItem}> 
-              <button onClick={ () => handleOpenModalView(item.id) }>
+              <button onClick={ () => handleOpenModalView(item.id, item.plate) }>
                 <div className={styles.tag}></div>
                 <span>Placa {item.plate}</span>
               </button>
