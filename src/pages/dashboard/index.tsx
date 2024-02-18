@@ -47,7 +47,7 @@ export default function Dashboard({ schedulings }: HomeProps){
   const [modalItem, setModalItem] = useState<SchedulingItemProps>()
   const [modalVisible, setModalVisible] = useState(false);
 
-
+ 
   function handleCloseModal(){
     setModalVisible(false);
   }
@@ -61,8 +61,6 @@ export default function Dashboard({ schedulings }: HomeProps){
         scheduling_id: id
        } 
      })
-
-     //console.log("response - ", response, " scheduling_id - ", id);
 
      setModalItem(response.data);
      setModalVisible(true);
@@ -123,8 +121,11 @@ export default function Dashboard({ schedulings }: HomeProps){
             <section  key={item.id} className={styles.orderItem}> 
               <button onClick={ () => handleOpenModalView(item.id, item.plate) }>
                 <div className={styles.tag}></div>
-                <span>Placa {item.plate}</span>
+                <span>Placa - {item.plate}</span>
               </button>
+              <span className={styles.label}>Nome: </span><span className={styles.name}>{item.name}</span>
+              <span className={styles.label}>Hora: </span><span className={styles.name}>{item.hour}</span>
+              <span className={styles.label}>Tipo Lavagem: </span><span className={styles.name}>{item.washingType}</span>
             </section>
           ))}
                  
