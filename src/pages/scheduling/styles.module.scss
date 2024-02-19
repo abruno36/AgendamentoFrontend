@@ -67,12 +67,13 @@
 @media (max-width: 620px) {
     .container {
         margin-left: 50px;
+        width: 450px;
     }
     .input1 {
         background-color: var(--dark-900);
         border: 0;
         padding: 1rem;
-        width: 120px;
+        width: 170px;
         height: 40px;
         border-radius: 0.3rem;
         color: var(--white);
@@ -81,7 +82,7 @@
     }
     .washingType {
         height: 40px;
-        width: 120px;
+        width: 170px;
         background-color: #101026;
         color: #fff;
         justify-content: space-between;
@@ -92,5 +93,38 @@
     }
     .container h1 {
         text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        margin-left: 50px;
+        width: 400px;
+    }
+    .input1 {
+        background-color: var(--dark-900);
+        border: 0;
+        padding: 1rem;
+        width: 140px;
+        height: 40px;
+        border-radius: 0.3rem;
+        color: var(--white);
+        border: 1px solid var(--gray-100);
+        margin-bottom: 1rem;
+    }
+    .washingType {
+        height: 40px;
+        width: 140px;
+        background-color: #101026;
+        color: #fff;
+        justify-content: space-between;
+    }
+    .input {
+        width: 340px;
+        justify-content: center;
+    }
+    .container h1 {
+        text-align: center;
+        font-size: 25px;
     }
 }
