@@ -7,7 +7,7 @@ import Router from 'next/router';
 
 import { toast } from 'react-toastify';
 
-type AuthContextData = {
+interface AuthContextData  {
   user: UserProps;
   isAuthenticated: boolean;
   signIn: (credentials: SignInProps) => Promise<void>;
@@ -137,3 +137,5 @@ export function AuthProvider({ children }: AuthProviderProps){
     </AuthContext.Provider>
   )
 }
+
+export default AuthContext;
