@@ -91,11 +91,11 @@ export default function Scheduling(){
         <h1>Novo Agendamento</h1>
 
         <form className={styles.form} onSubmit={handleRegister}>
-          <div className={styles.line1}>
+          <div className={styles.line}>
               <input 
               type="text" 
               placeholder="Placa"
-              className={styles.input}
+              className={styles.input1}
               value={plate}
               onChange={ (e) => setPlate(e.target.value) }
               />
@@ -106,13 +106,13 @@ export default function Scheduling(){
               </select>              
           </div>
 
-          <div className={styles.line1}>
+          <div className={styles.line}>
 
               <InputMask 
               type="text" 
               mask="99/99/9999"
               placeholder="Data"
-              className={styles.input}
+              className={styles.input1}
               value={date}
               onChange={ (e) => setDate(e.target.value) }
               />
@@ -121,7 +121,7 @@ export default function Scheduling(){
               type="text" 
               mask="99:99"
               placeholder="Horário"
-              className={styles.input}
+              className={styles.input1}
               value={hour}
               onChange={ (e) => setHour(e.target.value) }
               />

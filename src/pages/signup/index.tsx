@@ -48,10 +48,10 @@ export default function SignUp() {
   return (
     <>
     <Head>
-      <title>SujeitoPizza - Cadastro</title> 
+      <title>Agendamento SP</title> 
     </Head>
     <div className={styles.containerCenter}>
-      <Image src={logoImg} alt="Logo Agendamento SP" />
+      <Image className={styles.logo} src={logoImg} alt="Logo Agendamento SP" />
 
       <div className={styles.login}>
         <h1>Criando sua conta</h1>

@@ -29,14 +29,26 @@
     margin-bottom: 1rem;
 }
 
-.line1 {
+.input1 {
+    background-color: var(--dark-900);
+    border: 0;
+    padding: 1rem;
+    width: 280px;
+    height: 40px;
+    border-radius: 0.3rem;
+    color: var(--white);
+    border: 1px solid var(--gray-100);
+    margin-bottom: 1rem;
+}
+
+.line {
     display: flex;
     justify-content: space-between;
 }
 
 .washingType {
     height: 40px;
-    width: 229px;
+    width: 280px;
     background-color: #101026;
     color: #fff;
     justify-content: space-between;
@@ -54,8 +66,28 @@
 
 @media (max-width: 620px) {
     .container {
+        margin-left: 50px;
+    }
+    .input1 {
+        background-color: var(--dark-900);
+        border: 0;
+        padding: 1rem;
+        width: 120px;
+        height: 40px;
+        border-radius: 0.3rem;
+        color: var(--white);
+        border: 1px solid var(--gray-100);
+        margin-bottom: 1rem;
+    }
+    .washingType {
+        height: 40px;
+        width: 120px;
+        background-color: #101026;
+        color: #fff;
+        justify-content: space-between;
+    }
+    .input {
         width: 100%;
-        margin: 3rem;
         justify-content: center;
     }
     .container h1 {

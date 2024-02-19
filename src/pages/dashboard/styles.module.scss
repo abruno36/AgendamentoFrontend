@@ -76,11 +76,35 @@
 
 @media (max-width: 620px) {
     .container {
+        width: 470px;
+    }
+    .containerHeader {
+        width: 80%;
+        justify-content: right;
+        margin: auto;
+        h1 {
+            color: var(--white);
+            padding-bottom: 1rem;
+            font-size: 20px;
+        }
+    }
+    .emptyList {
         width: 100%;
-        margin: 4rem;
         justify-content: center;
     }
-    .container h1 {
-        text-align: center;
+    .listOreders {
+        width: 480px;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+    .plate {
+        font-size: 14px;
+    }
+    .nameCli {
+        max-width: 20ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }

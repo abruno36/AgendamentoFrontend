@@ -121,7 +121,7 @@ export default function Dashboard({ schedulings }: HomeProps){
             <section  key={item.id} className={styles.orderItem}> 
               <button onClick={ () => handleOpenModalView(item.id, item.plate) }>
                 <div className={styles.tag}></div>
-                <span>Placa - {item.plate}</span>
+                <span className={styles.plate}>Placa - {item.plate}</span>
               </button>
               <span className={styles.label}>Nome: </span><span className={styles.name}>{item.name}</span>
               <span className={styles.label}>Hora: </span><span className={styles.name}>{item.hour}hs</span>
