@@ -124,7 +124,7 @@ export default function Dashboard({ schedulings }: HomeProps){
                 <span>Placa - {item.plate}</span>
               </button>
               <span className={styles.label}>Nome: </span><span className={styles.name}>{item.name}</span>
-              <span className={styles.label}>Hora: </span><span className={styles.name}>{item.hour}</span>
+              <span className={styles.label}>Hora: </span><span className={styles.name}>{item.hour}hs</span>
               <span className={styles.label}>Tipo Lavagem: </span><span className={styles.name}>{item.washingType}</span>
             </section>
           ))}

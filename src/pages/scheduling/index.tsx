@@ -21,6 +21,10 @@ export default function Scheduling(){
         setWashingType(newWashingType);
   }
 
+    const changeDate = (e) => {
+    setDate(e)
+  }
+
   async function handleRegister(event: FormEvent){
     event.preventDefault(); //não atualiza a página
 
@@ -32,6 +36,16 @@ export default function Scheduling(){
   
       if(name === ''){
         toast.error('Informar nome do cliente!')
+        return;
+      }
+
+      if(date === ''){
+        toast.error('Informar a data do agendamento!')
+        return;
+      }
+
+      if(hour === ''){
+        toast.error('Informar a hora do agendamento!')
         return;
       }
 
@@ -93,6 +107,7 @@ export default function Scheduling(){
           </div>
 
           <div className={styles.line1}>
+
               <InputMask 
               type="text" 
               mask="99/99/9999"
