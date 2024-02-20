@@ -16,7 +16,15 @@
             "use": "@vercel/node"
         },
         {
-            "src": "src/**/*.test.{ts,tsx}",
+            "src": "src/pages/scheduling/Scheduling.test.tsx",
+            "use": "@vercel/static-build"
+        },
+        {
+            "src": "src/pages/dashboard/Dashboard.test.tsx",
+            "use": "@vercel/static-build"
+        },
+        {
+            "src": "src/pages/components/Header.test.tsx",
             "use": "@vercel/static-build"
         }
     ]
