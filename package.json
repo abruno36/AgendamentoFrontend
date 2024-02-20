@@ -39,6 +39,7 @@
         "@types/react": "^18.2.47",
         "@types/react-modal": "^3.16.3",
         "@types/testing-library__react": "^10.2.0",
+        "babel-jest": "^29.7.0",
         "jest": "^29.7.0",
         "jest-environment-jsdom": "^29.7.0",
         "ts-jest": "^29.1.2",
