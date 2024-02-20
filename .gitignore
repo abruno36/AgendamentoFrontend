@@ -38,3 +38,5 @@ next-env.d.ts
 # Jest
 __tests__/
 *.test.js
+*.test.ts
+*.test.tsxs
