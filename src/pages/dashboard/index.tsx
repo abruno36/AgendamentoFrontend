@@ -25,7 +25,7 @@ type SchedulingProps = {
   vehicle: string;
 }
 
-interface HomeProps{
+export interface HomeProps{
   schedulings: SchedulingProps[];
 }
 
