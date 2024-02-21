@@ -51,4 +51,15 @@
         width: 70%;
         justify-content: center;
     }
+    .text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .text {
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+    }
 }
