@@ -11,6 +11,8 @@ import { Button } from '../components/ui/Button';
 
 import { AuthContext } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
+import ThemeSwitcher from '../core-components/theme-switcher';
+import ThemeProvider from "../providers/theme-provider";
 
 import Link from 'next/link';
 
@@ -46,6 +48,12 @@ export default function Home() {
 
   return (
     <>
+      <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+      >
     <Head>
       <title>Agendamento SP</title> 
     </Head>
@@ -79,9 +87,10 @@ export default function Home() {
         <Link href="/signup" legacyBehavior>
            <a className={styles.text}>Nao possui uma conta? Cadastre-se</a>
         </Link>
-
+         <ThemeSwitcher />
       </div>
     </div>
+    </ThemeProvider>
     </>
   )
 }

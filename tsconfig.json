@@ -15,7 +15,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": ["@radix-ui/react-slot"]
   },
   "include": [
     "next-env.d.ts",
