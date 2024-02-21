@@ -11,6 +11,10 @@ const config: Config.InitialOptions = {
     '^@/services/(.*)$': '<rootDir>/src/services/$1',
     '^@/contexts/(.*)$': '<rootDir>/src/contexts/$1',
   },
+  testPathIgnorePatterns: [
+    "<rootDir>/.next/", // Ignora a pasta .next/
+    "<rootDir>/node_modules/", // Ignora a pasta node_modules/
+  ],
 };
 
 export default config;
