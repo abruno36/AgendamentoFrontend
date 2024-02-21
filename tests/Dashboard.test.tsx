@@ -1,8 +1,10 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Dashboard, { HomeProps } from '../dashboard';
+import Dashboard, { HomeProps } from '../src/pages/dashboard';
 import { setupServer } from 'msw/node';
-import { rest } from 'msw';
+import { handlers } from '../src/mocks/handlers';
+
+const server = setupServer(...handlers);
 
 const mockScheduling: HomeProps = {
   schedulings: [
@@ -14,16 +16,9 @@ const mockScheduling: HomeProps = {
       hour: '10:00',
       washingType: 'Standard',
       status: false,
-      vehicle: 'Car',
-
+      vehicle: 'Car'}
   ],
 };
-
-const server = setupServer(
-  rest.get('/schedulings', (req, res, ctx) => {
-    return res(ctx.json(mockScheduling));
-  })
-);
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());

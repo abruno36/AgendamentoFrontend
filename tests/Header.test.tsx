@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { AuthContext } from '../../contexts/AuthContext';
-import { Header } from '../Header';
+import { AuthContext } from '../src/contexts/AuthContext';
+import { Header } from '../src/components/Header';
 
 const mockSignOut = jest.fn();
 

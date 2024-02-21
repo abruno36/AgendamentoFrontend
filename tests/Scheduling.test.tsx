@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, act } from '@testing-library/react';
-import Scheduling from '../scheduling';
+import Scheduling from '../src/pages/scheduling';
 
 jest.mock('react-input-mask', () => ({ children }) => children);
 

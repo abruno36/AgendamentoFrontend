@@ -39,6 +39,7 @@
         "tailwindcss-animate": "^1.0.7"
     },
     "devDependencies": {
+        "@testing-library/react": "11",
         "@types/bcryptjs": "^2.4.6",
         "@types/jest": "^29.5.12",
         "@types/node": "^20.10.8",
