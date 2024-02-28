@@ -8,8 +8,8 @@ export function setupAPIClient(ctx = undefined){
   let cookies = parseCookies(ctx);
 
   const api = axios.create({
-    baseURL: 'https://scheduling-982683d24f3c.herokuapp.com',  //baseURL - HEROKU
-    //baseURL: 'http://localhost:3333', //baseURL - localhost
+    //baseURL: 'https://scheduling-982683d24f3c.herokuapp.com',  //baseURL - HEROKU
+    baseURL: 'http://localhost:3333', //baseURL - localhost
     headers: {
       Authorization: `Bearer ${cookies['@nextauth.token']}`
     }
